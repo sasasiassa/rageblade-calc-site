@@ -1,0 +1,9 @@
+.result {
+  color: white;
+}
+.result p,
+.result h5 {
+  display: inline-block;
+  color: #64a89b;
+  margin: 10px 2px;
+}
