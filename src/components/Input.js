@@ -18,6 +18,7 @@ const Input = (props) => {
         name={props.variableName}
         type="number"
         min="0"
+        placeholder="0"
         onChange={handleChange}
       ></input>
     </div>

@@ -29,7 +29,7 @@
 }
 .flex-wrapper input::placeholder {
   color: #8dd8c9;
-  opacity: 0.8;
+  opacity: 0.2;
 }
 .flex-wrapper input:focus {
   outline: none;
