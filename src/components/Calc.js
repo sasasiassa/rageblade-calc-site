@@ -11,6 +11,11 @@ const Calc = () => {
     });
     setResult({ ...response.data });
   };
+  const handleKeyDown = async (e) => {
+    if (e.keyCode === 13) {
+      handleClick();
+    }
+  };
   const [variables, setVariables] = useState({
     crit: 0,
     critDmg: 0,
@@ -47,7 +52,7 @@ const Calc = () => {
     "Total Mana",
   ];
   return (
-    <div className="wrapper">
+    <div className="wrapper" onKeyDown={handleKeyDown}>
       <h1>TrueDMG</h1>
       <h3>A calculator to compare crit and on-hit</h3>
       <VariablesContext.Provider value={[variables, setVariables]}>
@@ -57,7 +62,7 @@ const Calc = () => {
               <Input
                 name={nameArr[index]}
                 variableName={item}
-                placeholder="0"
+                placeholder=""
                 key={item}
               ></Input>
             );
